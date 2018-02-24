@@ -17,6 +17,7 @@ body {
     /* margin-top: 125px; */
     /* width: 85%; */
 }
+
 #logo {
     margin-left: 10%;
     height: 50px;
@@ -24,20 +25,12 @@ body {
     margin-right: 85px;
 }
 
-#a1 {
-    margin-left: 27%;
-    margin-top: 20px;
-    background-color: maroon;
+#done {
+    margin-left: 65%;
+    background-color: darkorange;
     color: white;
     border-radius: 5px;
-}
-
-#a2 {
-    margin-left: 10%;
-    margin-top: 20px;
-    background-color: purple;
-    color: white;
-    border-radius: 5px;
+    visibility: hidden;
 }
 
 ul {
