@@ -45,3 +45,14 @@ function newElement() {
     }
   }
 }
+
+function assign() {
+  for (i = 0; i < close.length; i++) {
+      var div = close[i].parentElement;
+      div.style.display = "none";
+  }
+}
+
+function go() {
+  window.location.href = 'manual.html';
+}
