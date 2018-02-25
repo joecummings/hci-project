@@ -1,3 +1,5 @@
+var chores = [];
+
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -29,6 +31,7 @@ function newElement() {
     alert("You must write something!");
   } else {
     document.getElementById("myUL").appendChild(li);
+    chores.push(inputValue);
   }
   document.getElementById("myInput").value = "";
 
@@ -51,6 +54,7 @@ function assign() {
       var div = close[i].parentElement;
       div.style.display = "none";
   }
+  sessionStorage.setItem('todo', chores);
 }
 
 function go() {

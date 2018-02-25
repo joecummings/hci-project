@@ -1,12 +1,18 @@
-var choreslist = ["Do Dishes", "Take Out the Trash", "Brush Pet Tiger", "Buy Shu a Beer", "Win at Fortnite"];
+var choreslist = sessionStorage.getItem('todo');
 var choresdone = 0;
+var totalchores = 0;
 var donebutton = document.getElementById('done');
 
 function addchores() {
 	// Your code goes here
-  for (var i = 0; i < choreslist.length; i++) {
-    newElement(choreslist[i]);
+  b = choreslist.indexOf(',');
+  while (b != -1) {
+    chore = choreslist.substring(0, b);
+    newElement(chore);
+    choreslist = choreslist.substring(b+1);
+    b =  choreslist.indexOf(',');
   }
+  newElement(choreslist);
 };
 
 // Add a "checked" symbol when clicking on a list item
@@ -20,7 +26,7 @@ list.addEventListener('click', function(ev) {
     else {
       choresdone--;
     }
-    if (choresdone == choreslist.length) {
+    if (choresdone == totalchores) {
       donebutton.style.visibility = 'visible';
     }
     else {
@@ -31,8 +37,10 @@ list.addEventListener('click', function(ev) {
 
 function clearlist() {
   list.style.display = 'none';
-  choreslist = [];
+  sessionStorage.todo = [];
   donebutton.style.visibility = 'hidden';
+  totalchores = 0;
+  choresdone = 0;
 }
 
 // Create a new list item when clicking on the "Add" button
@@ -42,6 +50,7 @@ function newElement(chore) {
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   document.getElementById("myUL").appendChild(li);
+  totalchores++;
 }
 
 addchores();
