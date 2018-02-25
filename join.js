@@ -9,12 +9,25 @@ function generateID(){
     p.appendChild(t);
     document.getElementById("ID").appendChild(p);
     document.getElementById("generateid").disabled = true;
+    document.getElementById('myInput').value = inputValue;
 }
 
 function goto() {
     var houseid = document.getElementById('myInput').value;
-    if (houseid = '') {
+    if (houseid.length == 0) {
         alert('Must enter House ID');
-        return false;
+    }
+    else {
+      var id = sessionStorage.userid;
+      sessionStorage.setItem('house'+id, houseid);
+      if (sessionStorage.getItem(houseid)) {
+          var rms = sessionStorage.getItem(houseid);
+      } else {
+          var rms = [];
+      }
+      var name = sessionStorage.getItem('name'+id);
+      rms = [rms, name];
+      sessionStorage.setItem(houseid, rms);
+      window.location.href = 'home.html';
     }
 }
