@@ -1,0 +1,80 @@
+body {
+    padding: 20px;
+    background-color: #f6f5f3;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+#boddy {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbuffer {
+    margin-left:300px;
+}
+
+.card {
+    background-color: #f9f8fd;
+    /* margin-top: 125px; */
+    /* width: 85%; */
+}
+
+#logo {
+    margin-left: 10%;
+    height: 50px;
+    padding:10px;
+    margin-right: 85px;
+}
+
+.menubtn1 {
+    margin: 50px 50px 50px 50px;
+    padding: 30px 50px 30px 50px;
+    background-color: lightblue;
+    text-align: center;
+    width: 260px;
+    font-size: 28px;
+    border-radius: 15px;
+    border-style: outset;
+    border-width: 5px;
+    border-color: blue;
+}
+
+.menubtn2 {
+  margin: 50px 50px 50px 50px;
+  padding: 30px 50px 30px 50px;
+  background-color: lightpink;
+  text-align: center;
+  width: 260px;
+  font-size: 28px;
+  border-radius: 15px;
+  border-style: outset;
+  border-width: 5px;
+  border-color: pink;
+}
+.menubtn3 {
+  margin: 0px 50px 50px 50px;
+  padding: 30px 50px 30px 50px;
+  background-color: lightgreen;
+  text-align: center;
+  width: 260px;
+  font-size: 28px;
+  border-radius: 15px;
+  border-style: outset;
+  border-width: 5px;
+  border-color: green;
+}
+.menubtn4 {
+  margin: 0px 50px 50px 50px;
+  padding: 30px 50px 30px 50px;
+  background-color: lightyellow;
+  text-align: center;
+  width: 260px;
+  font-size: 28px;
+  border-radius: 15px;
+  border-style: outset;
+  border-width: 5px;
+  border-color: yellow;
+}
