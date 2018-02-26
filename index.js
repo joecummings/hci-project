@@ -51,6 +51,7 @@ function makeaccount(){
       sessionStorage.setItem('name'+id, name);
       sessionStorage.setItem('email'+id, email);
       sessionStorage.setItem('password'+id, thirdpassword);
+      sessionStorage.profileid = sessionStorage.userid;
       window.location.href = 'join.html';
   }
 }
@@ -81,3 +82,10 @@ function login() {
     window.location.href = 'home.html';
   }
 }
+$( "#trigger" )
+  .mouseup(function() {
+    $("#password1").attr('type','password');
+  })
+  .mousedown(function() {
+    $("#password1").attr('type','text');
+  });
