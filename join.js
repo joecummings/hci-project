@@ -22,11 +22,10 @@ function goto() {
       sessionStorage.setItem('house'+id, houseid);
       if (sessionStorage.getItem(houseid)) {
           var rms = sessionStorage.getItem(houseid);
+          rms = [rms, id];
       } else {
-          var rms = [];
+          var rms = [id];
       }
-      var name = sessionStorage.getItem('name'+id);
-      rms = [rms, name];
       sessionStorage.setItem(houseid, rms);
       window.location.href = 'home.html';
     }
