@@ -4,8 +4,9 @@ var goodends = ['com', 'org', 'net', 'edu', '.gov'];
 function makeaccount(){
   var firstpassword = document.getElementById('password1').value;
   var secondpassword = document.getElementById('password2').value;
+  var thirdpassword = document.getElementById('password3').value;
   var email = document.getElementById('email').value;
-  var username = document.getElementById('username').value;
+  var username = document.getElementById('usernameRegistration').value;
   var name = document.getElementById('name').value;
 
   var firstpart = email.split(".")[0];
@@ -24,7 +25,7 @@ function makeaccount(){
   else if (firstpart.substring(atexists + 1).length == 0) {
     emessage.innerHTML = 'Invalid Email';
   }
-  else if(firstpassword != secondpassword) {
+  else if(secondpassword != thirdpassword) {
       emessage.innerHTML = 'Passwords must match!';
   }
   else if (username.length == 0) {
@@ -33,7 +34,7 @@ function makeaccount(){
   else if (name.length == 0) {
     emessage.innerHTML = 'No Name';
   }
-  else if (firstpassword.length == 0) {
+  else if (thirdpassword.length == 0) {
     emessage.innerHTML = 'No Password';
   }
   else {
@@ -48,7 +49,7 @@ function makeaccount(){
       sessionStorage.setItem(username, id);
       sessionStorage.setItem('name'+id, name);
       sessionStorage.setItem('email'+id, email);
-      sessionStorage.setItem('password'+id, firstpassword);
+      sessionStorage.setItem('password'+id, thirdpassword);
       window.location.href = 'join.html';
   }
 }

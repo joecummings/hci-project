@@ -35,7 +35,9 @@ body {
     margin-top: 20px;
     margin-bottom: 15px;
 }
-
+a, a:hover{
+  color:#333
+}
 #logo {
     margin-left: 35%;
     height: 100px;
