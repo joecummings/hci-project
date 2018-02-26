@@ -47,6 +47,7 @@ function makeaccount(){
       var id = sessionStorage.userid;
 
       sessionStorage.setItem(username, id);
+      sessionStorage.setItem('username'+id, username);
       sessionStorage.setItem('name'+id, name);
       sessionStorage.setItem('email'+id, email);
       sessionStorage.setItem('password'+id, thirdpassword);
