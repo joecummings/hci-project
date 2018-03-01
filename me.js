@@ -6,7 +6,13 @@ var password;
 var houseid;
 
 function load(uid  = sessionStorage.profileid) {
-  id = uid;
+  if (uid) {
+    id = uid;
+  }
+  else {
+    id = sessionStorage.userid;
+  }
+
   name = sessionStorage.getItem('name'+id);
   email = sessionStorage.getItem('email'+id);
   username = sessionStorage.getItem('username'+id);

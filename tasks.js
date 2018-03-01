@@ -54,7 +54,10 @@ function assign() {
       var div = close[i].parentElement;
       div.style.display = "none";
   }
-  sessionStorage.setItem('todo', chores);
+  var id = sessionStorage.userid;
+  var houseid = sessionStorage.getItem('house'+id);
+  var rms = sessionStorage.getItem(houseid);
+  sessionStorage.setItem('todo' + id, chores);
 }
 
 function go() {

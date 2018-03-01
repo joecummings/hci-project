@@ -1,4 +1,5 @@
-var choreslist = sessionStorage.getItem('todo');
+var pid = sessionStorage.profileid;
+var choreslist = sessionStorage.getItem('todo' + pid);
 var choresdone = 0;
 var totalchores = 0;
 var donebutton = document.getElementById('done');
