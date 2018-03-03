@@ -1,19 +1,43 @@
 body {
     padding: 20px;
     background-color: #f6f5f3;
+    text-align: center;
 }
 
 a:link {
     text-decoration: none;
 }
 
-#boddy {
-    margin-left: auto;
-    margin-right: auto;
+.h {
+  font-size: 40px;
+  width: 100%;
 }
 
+#boddy {
+    background-color: #30303d;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#bardiv {
+	width	: 92%;
+  /* text-align: center; */
+  margin-bottom: 50px;
+	height: 450px;
+}			
+
 .navbuffer {
-    margin-left:300px;
+    margin-left:400px;
+}
+
+/* body { background-color: #30303d; color: #fff; } */
+#chartdiv {
+  width: 100%;
+  height: 500px;
+  margin: auto;
 }
 
 .card {

@@ -9,12 +9,13 @@ body {
 }
 
 .navbuffer {
-    margin-left:300px;
+    margin-left:400px;
+    /* margin-bottom: 10px; */
 }
 
 .card {
     background-color: #f9f8fd;
-    /* margin-top: 125px; */
+    /* padding-top: 10px; */
     /* width: 85%; */
 }
 #logo {
