@@ -52,7 +52,7 @@ function makeaccount(){
       sessionStorage.setItem('email'+id, email);
       sessionStorage.setItem('password'+id, thirdpassword);
       sessionStorage.profileid = sessionStorage.userid;
-      window.location.href = 'join.html';
+      window.location.href = 'components/join.html';
   }
 }
 
@@ -79,7 +79,7 @@ function login() {
   }
   else {
     sessionStorage.userid = id;
-    window.location.href = 'home.html';
+    window.location.href = 'components/home.html';
   }
 }
 $( "#trigger" )

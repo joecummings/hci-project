@@ -2,14 +2,14 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="me.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
        rel="stylesheet">
   </head>
   <body>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="images/logoz.png" id="logo" alt="Split Logo"></a>
+        <a class="navbar-brand" href="#"><img src="../images/logoz.png" id="logo" alt="Split Logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,7 +21,7 @@
             <a class="nav-item nav-link" href="roommates.html">Roommates</a>
             <a class="nav-item nav-link" href="me.html">My Profile</a>
             <div class="navbuffer"> </div>
-            <a class="nav-item nav-link" href="index.html">Log Out</a>
+            <a class="nav-item nav-link" href="../index.html">Log Out</a>
             <a class="nav-item nav-link" href="settings.html"><i class="material-icons">settings</i></a>
           </div>
   </div>
@@ -29,32 +29,24 @@
         <div class="row">
             <div class="col-lg-8" id="boddy">
             <div class="card">
-                    <h3 class="card-header">
-                      Welcome to Split!
+                    <h3 class="card-header" id="Namebox">
+                      Not good
                     </h3>
-                    <table>
-                      <tr>
-                        <td>
-                          <a href="tasks.html"> <div class="menubtn1"> Chores List </div></a>
-                        </td>
-                        <td>
-                          <a href="mytasks.html"> <div class="menubtn2"> My Chores </div></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <a href="roommates.html"> <div class="menubtn3"> Roommates </div></a>
-                        </td>
-                        <td>
-                          <a href="me.html"> <div class="menubtn4"> My Profile </div></a>
-                        </td>
-                      </tr>
-                    </table>
-            </div>
-        </div>
+                  </div>
+                  <div class="card">
+                    <img id="propic">
+                    <div id="inputpic">
+                      Upload a Profile Picture (URL): &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                      <input type="url" id="newpic" onchange="changepic()">
+                    </div>
+                    <div class="card" id="userbox"></div>
+                    <div class="card" id="emailbox"></div>
+                    <div class="card" id="houseidbox"></div>
+                  </div>
+                </div>
     </div>
 </div>
-    <script src="home.js"></script>
+    <script src="me.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
