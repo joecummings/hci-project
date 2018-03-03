@@ -89,3 +89,9 @@ $( "#trigger" )
   .mousedown(function() {
     $("#password1").attr('type','text');
   });
+
+function showSignUp(){
+  $("#sign-up").toggleClass('hidden');
+  $("#sign-button").addClass('hidden');
+  $("#login-stuff").addClass('hidden');
+}

@@ -23,6 +23,10 @@ body {
     color: white;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .new-user {
     font-size: 30px;
     text-align: center;
