@@ -1,60 +1,93 @@
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="me.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-       rel="stylesheet">
-  </head>
-  <body>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="home.html"><img src="../images/logoz.png" id="logo" alt="Split Logo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <!-- <a class="nav-item nav-link active" href="home.html">Home <span class="sr-only">(current)</span></a> -->
-            <a class="nav-item nav-link" href="tasks.html">Add Chores</a>
-            <a class="nav-item nav-link" href="mytasks.html">My Chores</a>
-            <a class="nav-item nav-link" href="roommates.html">Roommates</a>
-            <a class="nav-item nav-link active" href="me.html">My Profile<span class="sr-only">(current)</span></a>
-            <div class="navbuffer"> </div>
-            <a class="nav-item nav-link" href="../index.html">Log Out</a>
-            <a class="nav-item nav-link" href="settings.html"><i class="material-icons">settings</i></a>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="me.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="home.html"><img src="../images/logoz.png" id="logo" alt="Split Logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <!-- <a class="nav-item nav-link active" href="home.html">Home <span class="sr-only">(current)</span></a> -->
+          <a class="nav-item nav-link" href="tasks.html">Add Chores</a>
+          <a class="nav-item nav-link" href="mytasks.html">My Chores</a>
+          <a class="nav-item nav-link" href="roommates.html">Roommates</a>
+          <a class="nav-item nav-link active" href="me.html">My Profile<span class="sr-only">(current)</span></a>
+          <div class="navbuffer"> </div>
+          <a class="nav-item nav-link" href="../index.html">Log Out</a>
+          <a class="nav-item nav-link" href="settings.html"><i class="material-icons">settings</i></a>
+        </div>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col-lg-10" id="boddy">
+        <div class="card">
+          <h3 class="card-header" id="Namebox">
+            Not good
+          </h3>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="row">
+        <div class="col-lg-10"> -->
+        <div class="card">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="info"><strong>Upload a Profile Picture (URL): </strong></div>
+            </div>
+            <div class="col-lg-5">
+              <img id="propic">
+              <div id="inputpic" class = "info">
+                <input type="url" id="newpic" onchange="changepic()">
+              </div>
+            </div>
           </div>
-  </div>
-</nav>
-        <div class="row">
-            <div class="col-lg-10" id="boddy">
-            <div class="card">
-                    <h3 class="card-header" id="Namebox">
-                      Not good
-                    </h3>
-                  </div>
-                  <div class="card">
-
-                    <div class="textInfo"><strong>Upload a Profile Picture (URL): </strong></div>
-                    <img id="propic">
-                    <div id="inputpic" class = "info">
-                      <input type="url" id="newpic" onchange="changepic()">
-                    </div>
-                    <div class="textInfo"><strong>Username: </strong></div>
-                    <div class="info" id="userbox"></div>
-                    <div class="textInfo"><strong>Email: </strong></div>
-                    <div class="info" id="emailbox"></div>
-                    <div class="textInfo"><strong>House ID: </strong></div>
-                    <div class="info" id="houseidbox"></div>
-                    <div class="textInfo"><strong>Points: </strong></div>
-                    <div class="info" id="pointsbox"></div>
-                  </div>
-                </div>
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="info"><strong>Username: </strong></div>
+            </div>
+            <div class="col-lg-5">
+              <div class="info" id="userbox"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="info"><strong>Email: </strong></div>
+            </div>
+            <div class="col-lg-5">
+              <div class="info" id="emailbox"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="info"><strong>House ID: </strong></div>
+            </div>
+            <div class="col-lg-5">
+              <div class="info" id="houseidbox"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="info"><strong>Points: </strong></div>
+            </div>
+            <div class="col-lg-5">
+              <div class="info" id="pointsbox"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-    <script src="me.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </div>
+<script src="me.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
