@@ -37,9 +37,13 @@ list.addEventListener('click', function(ev) {
 }, false);
 
 function clearlist() {
-  var points = sessionStorage.getItem('points'+id) + 10
   var id = sessionStorage.userid;
-  sessionStorage.setItem('points'+id, points)
+  var points = sessionStorage.getItem('points'+id)
+  console.log(points)
+  var pointsNum = Number(points)+10
+  console.log(pointsNum)
+
+  sessionStorage.setItem('points'+id, pointsNum)
   list.style.display = 'none';
   sessionStorage.todo = [];
   donebutton.style.visibility = 'hidden';
