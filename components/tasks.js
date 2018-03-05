@@ -80,10 +80,15 @@ function go() {
     li.appendChild(t);
     var select = document.createElement("select");
     // hardcoded in values
-    for (var k = 0; k < 3; k++){
+    var id = sessionStorage.userid;
+    var houseid = sessionStorage.getItem('house' + id);
+    rms  = sessionStorage.getItem(houseid);
+    for (var k = 0; k < rms.length; k+=2){
       var o = document.createElement("option");
-      var txt = document.createTextNode(String(k));
-      o.setAttribute("value",String(k));
+      id = rms[k];
+      var name = sessionStorage.getItem('name'+id)
+      var txt = document.createTextNode(name);
+      o.setAttribute("value",name);
       select.appendChild(o).appendChild(txt);
     }
     select.style.float = "right";
@@ -92,7 +97,25 @@ function go() {
   }
 }
 function assignChores() {
-  
+  for (i = 0; i < close.length; i++) {
+    var div = close[i].parentElement;
+    div.style.display = "none";
+  }
+  var selects = document.getElementsByTagName("select")
+  var options = document.getElementsByTagName("option")
+  var id = sessionStorage.userid;
+  var houseid = sessionStorage.getItem('house'+id);
+  var rms = sessionStorage.getItem(houseid);
+  var choreList = [];
+  for(var i = 0; i < selects.length; i++)
+  {
+    console.log(selects[i].childNodes[0].childNodes[0])
+    if(selects[i].options[selects[i].selectedIndex].text === sessionStorage.getItem('name'+id))
+    {
+      choreList.push(selects[i].options[selects[i].selectedIndex].text)
+    }
+  }
+  sessionStorage.setItem('todo' + id, choreList);
 }
 document.getElementById("myInput")
 .addEventListener("keyup", function(event) {
