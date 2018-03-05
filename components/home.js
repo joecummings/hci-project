@@ -101,14 +101,14 @@ var gaugeChart = AmCharts.makeChart("chartdiv", {
   }
 });
 
-
+id = sessionStorage.userid;
 var chart = AmCharts.makeChart("bardiv",
 {
     "type": "serial",
     "theme": "dark",
     "dataProvider": [{
         "name": "Me",
-        "points": 50,
+        "points":   sessionStorage.getItem('points'+id),
         "color": "#7F8DA9",
         "bullet": "https://scontent-ort2-1.xx.fbcdn.net/v/t31.0-8/28337442_1294268390719867_4810829379562380624_o.jpg?oh=bfa15cfe858b85ccda6f7c6a318f0d05&oe=5B3D4018"
     }],

@@ -27,6 +27,7 @@ function goto() {
           var rms = [id];
       }
       sessionStorage.setItem(houseid, rms);
+      sessionStorage.setItem('points'+id, '0')
       window.location.href = 'home.html';
     }
 }

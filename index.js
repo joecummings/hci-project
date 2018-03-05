@@ -51,6 +51,7 @@ function makeaccount(){
       sessionStorage.setItem('name'+id, name);
       sessionStorage.setItem('email'+id, email);
       sessionStorage.setItem('password'+id, thirdpassword);
+            sessionStorage.setItem('points'+id, '0')
       sessionStorage.profileid = sessionStorage.userid;
       window.location.href = 'components/join.html';
   }

@@ -57,20 +57,23 @@ function assign() {
   if (chores.length == 0){
     alert('You have to enter some chores first');
   }
-  for (i = 0; i < close.length; i++) {
+  else
+  {
+    for (i = 0; i < close.length; i++) {
       var div = close[i].parentElement;
       div.style.display = "none";
+    }
+    var id = sessionStorage.userid;
+    var houseid = sessionStorage.getItem('house'+id);
+    var rms = sessionStorage.getItem(houseid);
+    sessionStorage.setItem('todo' + id, chores);
   }
-  var id = sessionStorage.userid;
-  var houseid = sessionStorage.getItem('house'+id);
-  var rms = sessionStorage.getItem(houseid);
-  sessionStorage.setItem('todo' + id, chores);
 }
 
 function go() {
   var currentChores = compare(chores, deletedChores);
-  // console.log(currentChores);
-  
+   console.log(document.getElementById("myModalUL").length);
+   document.getElementById("myModalUL").innerHTML = '';
   for (var j = 0; j < currentChores.length; j++){
     var li = document.createElement("li");
     var t = document.createTextNode(chores[j]);
@@ -88,13 +91,15 @@ function go() {
     document.getElementById("myModalUL").appendChild(li);
   }
 }
-
+function assignChores() {
+  
+}
 document.getElementById("myInput")
-    .addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("submite").click();
-    }
+.addEventListener("keyup", function(event) {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+    document.getElementById("submite").click();
+  }
 });
 
 

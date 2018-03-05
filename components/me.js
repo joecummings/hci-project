@@ -18,10 +18,12 @@ function load(uid  = sessionStorage.profileid) {
   username = sessionStorage.getItem('username'+id);
   password = sessionStorage.getItem('password'+id);
   houseid = sessionStorage.getItem('house'+id);
+    points = sessionStorage.getItem('points'+id);
   document.getElementById('Namebox').innerHTML = name;
-  document.getElementById('userbox').innerHTML = 'Username: '+username;
-  document.getElementById('emailbox').innerHTML = 'Email: '+email;
-  document.getElementById('houseidbox').innerHTML = 'House ID: '+houseid;
+  document.getElementById('userbox').innerHTML = username;
+  document.getElementById('emailbox').innerHTML = email;
+  document.getElementById('houseidbox').innerHTML = houseid;
+    document.getElementById('pointsbox').innerHTML = points;
 
   sessionStorage.profileid = sessionStorage.userid;
   if (sessionStorage.getItem('pic'+id)) {

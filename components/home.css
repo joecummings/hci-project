@@ -9,14 +9,14 @@ a:link {
 }
 
 .h {
-  font-size: 40px;
+  font-size: 35px;
   width: 100%;
 }
 
 #boddy {
     background-color: #30303d;
     color: #fff;
-    margin-top: 10px;
+    margin-top: 8px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -27,7 +27,7 @@ a:link {
   /* text-align: center; */
   margin-bottom: 50px;
 	height: 450px;
-}			
+}
 
 .navbuffer {
     margin-left:400px;
