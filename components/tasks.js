@@ -102,17 +102,19 @@ function assignChores() {
     div.style.display = "none";
   }
   var selects = document.getElementsByTagName("select")
-  var options = document.getElementsByTagName("option")
+  var options = document.getElementsByTagName("li")
   var id = sessionStorage.userid;
   var houseid = sessionStorage.getItem('house'+id);
   var rms = sessionStorage.getItem(houseid);
   var choreList = [];
+  var picked = ''
   for(var i = 0; i < selects.length; i++)
   {
-    console.log(selects[i].childNodes[0].childNodes[0])
+    picked = options[i].childNodes
+    var str = picked[0].data
     if(selects[i].options[selects[i].selectedIndex].text === sessionStorage.getItem('name'+id))
     {
-      choreList.push(selects[i].options[selects[i].selectedIndex].text)
+      choreList.push(str)
     }
   }
   sessionStorage.setItem('todo' + id, choreList);
