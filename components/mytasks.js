@@ -1,5 +1,5 @@
-var pid = sessionStorage.profileid;
-var choreslist = sessionStorage.getItem('todo' + pid);
+var id = sessionStorage.userid;
+var choreslist = sessionStorage.getItem('todo' + id);
 var choresdone = 0;
 var totalchores = 0;
 var donebutton = document.getElementById('done');
@@ -13,7 +13,9 @@ function addchores() {
     choreslist = choreslist.substring(b+1);
     b =  choreslist.indexOf(',');
   }
-  newElement(choreslist);
+  if (choreslist != []) {
+    newElement(choreslist);
+  }
 };
 
 // Add a "checked" symbol when clicking on a list item
@@ -45,7 +47,7 @@ function clearlist() {
 
   sessionStorage.setItem('points'+id, pointsNum)
   list.style.display = 'none';
-  sessionStorage.todo = [];
+  sessionStorage.removeItem('todo'+id);
   donebutton.style.visibility = 'hidden';
   totalchores = 0;
   choresdone = 0;

@@ -10,7 +10,7 @@ body {
 }
 
 .navbuffer {
-    margin-left:400px;
+    margin-left:450px;
 }
 
 .card {
@@ -30,10 +30,10 @@ body {
   font-size: 20px;
 }
 #logo {
-    margin-left: 10%;
+    margin-left: 5%;
     height: 50px;
     padding:10px;
-    margin-right: 85px;
+    margin-right: 5%;
 }
 
 #inputpic {
@@ -45,7 +45,7 @@ body {
 }
 
 #propic {
-  margin: auto;
+  margin-left: 300px;
   height: 300px;
-  width: auto;
+  width: 300px;
 }

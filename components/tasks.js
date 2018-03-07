@@ -66,7 +66,25 @@ function assign() {
     var id = sessionStorage.userid;
     var houseid = sessionStorage.getItem('house'+id);
     var rms = sessionStorage.getItem(houseid);
-    sessionStorage.setItem('todo' + id, chores);
+    var c;
+    rms = rms.split(',');
+    var rmcount = rms.length;
+    var i = 0;
+    var tempid;
+    var tempchores;
+    while (chores.length != 0){
+      c = chores.pop();
+      tempid = rms[i % rmcount];
+      if (sessionStorage.getItem('todo'+tempid)) {
+        tempchores = sessionStorage.getItem('todo'+tempid);
+        tempchores = tempchores + ',' + c;
+        sessionStorage.setItem('todo' + tempid, tempchores);
+      }
+      else {
+        sessionStorage.setItem('todo' + tempid, c);
+      }
+      i++;
+    }
   }
 }
 
