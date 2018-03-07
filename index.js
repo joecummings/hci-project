@@ -80,6 +80,7 @@ function login() {
   }
   else {
     sessionStorage.userid = id;
+    sessionStorage.profileid = sessionStorage.userid;
     window.location.href = 'components/home.html';
   }
 }

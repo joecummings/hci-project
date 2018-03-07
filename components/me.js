@@ -42,6 +42,7 @@ function changepic() {
 function putinpic() {
   var picaddr = sessionStorage.getItem('pic'+id);
   document.getElementById('inputpic').style.display = 'none';
+  document.getElementById('inputpictxt').style.display = 'none';
   var pic = document.getElementById('propic');
   pic.style.display = "flex";
   pic.src = picaddr;

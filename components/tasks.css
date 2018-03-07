@@ -10,7 +10,7 @@ body {
 }
 
 .navbuffer {
-    margin-left:400px;
+    margin-left:450px;
     /* margin-bottom: 10px; */
 }
 
@@ -20,10 +20,10 @@ body {
     /* width: 85%; */
 }
 #logo {
-    margin-left: 10%;
+    margin-left: 5%;
     height: 50px;
     padding:10px;
-    margin-right: 85px;
+    margin-right: 5%;
 }
 
 #a1 {
