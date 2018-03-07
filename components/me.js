@@ -23,7 +23,16 @@ function load(uid  = sessionStorage.profileid) {
   document.getElementById('userbox').innerHTML = username;
   document.getElementById('emailbox').innerHTML = email;
   document.getElementById('houseidbox').innerHTML = houseid;
-    document.getElementById('pointsbox').innerHTML = points;
+  document.getElementById('pointsbox').innerHTML = points;
+  if (Number(points)>=20){
+    document.getElementById('medal').src = "../images/bronze.png";
+  }
+  if (Number(points)>=50){
+    document.getElementById('medal').src = "../images/silver.png";
+  }
+  if (Number(points)>=100){
+    document.getElementById('medal').src = "../images/gold.png";
+  }
 
   sessionStorage.profileid = sessionStorage.userid;
   if (sessionStorage.getItem('pic'+id)) {

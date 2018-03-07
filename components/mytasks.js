@@ -2,6 +2,7 @@ var id = sessionStorage.userid;
 var choreslist = sessionStorage.getItem('todo' + id);
 var choresdone = 0;
 var totalchores = 0;
+var pointsearned = 0;
 var donebutton = document.getElementById('done');
 
 function addchores() {
@@ -23,11 +24,14 @@ var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     var a = ev.target.classList.toggle('checked');
+    var ppc = Math.round(Math.random()*4+8);
     if (a) {
       choresdone++;
+      pointsearned = pointsearned + ppc;
     }
     else {
       choresdone--;
+      pointsearned = pointsearned - ppc;
     }
     if (choresdone == totalchores) {
       donebutton.style.visibility = 'visible';
@@ -42,7 +46,7 @@ function clearlist() {
   var id = sessionStorage.userid;
   var points = sessionStorage.getItem('points'+id)
   console.log(points)
-  var pointsNum = Number(points)+10
+  var pointsNum = Number(points)+pointsearned;
   console.log(pointsNum)
 
   sessionStorage.setItem('points'+id, pointsNum)
