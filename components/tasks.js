@@ -69,7 +69,7 @@ function assign() {
     var c;
     rms = rms.split(',');
     var rmcount = rms.length;
-    var i = 0;
+    var i = Math.round(Math.random()*4);
     var tempid;
     var tempchores;
     while (chores.length != 0){
