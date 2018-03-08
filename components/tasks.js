@@ -124,19 +124,31 @@ function assignChores() {
   var id = sessionStorage.userid;
   var houseid = sessionStorage.getItem('house'+id);
   var rms = sessionStorage.getItem(houseid);
-  var choreList = [];
-  var picked = ''
+  rms = rms.split(',');
+  var picked = '';
+  var str = '';
   for(var i = 0; i < selects.length; i++)
   {
-    picked = options[i].childNodes
-    var str = picked[0].data
-    if(selects[i].options[selects[i].selectedIndex].text === sessionStorage.getItem('name'+id))
-    {
-      choreList.push(str)
+    for (var j = 0;  j < rms.length; j++) {
+      picked = options[i].childNodes;
+      str = picked[0].data;
+      var tempid = rms[j];
+      if(selects[i].options[selects[i].selectedIndex].text == sessionStorage.getItem('name'+tempid))
+      {
+        if (sessionStorage.getItem('todo'+tempid)) {
+          tempchores = sessionStorage.getItem('todo'+tempid);
+          tempchores = tempchores + ',' + str;
+          sessionStorage.setItem('todo' + tempid, tempchores);
+        }
+        else {
+          sessionStorage.setItem('todo' + tempid, str);
+        }
+      }
     }
   }
-  sessionStorage.setItem('todo' + id, choreList);
+
 }
+
 document.getElementById("myInput")
 .addEventListener("keyup", function(event) {
   event.preventDefault();

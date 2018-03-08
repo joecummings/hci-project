@@ -34,13 +34,16 @@ function load(uid  = sessionStorage.profileid) {
     document.getElementById('medal').src = "../images/gold.png";
   }
 
-  sessionStorage.profileid = sessionStorage.userid;
   if (sessionStorage.getItem('pic'+id)) {
     putinpic();
   }
   else {
     document.getElementById('propic').style.display = 'none';
+    if (sessionStorage.profileid != sessionStorage.userid) {
+      document.getElementById('photoblock').style.display = 'none';
+    }
   }
+  sessionStorage.profileid = sessionStorage.userid;
 }
 
 function changepic() {
