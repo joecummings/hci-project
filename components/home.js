@@ -148,3 +148,7 @@ var chart = AmCharts.makeChart("bardiv",
     	"enabled": false
      }
 });
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});

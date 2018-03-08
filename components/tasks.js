@@ -181,3 +181,7 @@ function compare(list1, list2){
   console.log(returnlist);
   return returnlist;
 }
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
