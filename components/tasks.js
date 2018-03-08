@@ -85,6 +85,7 @@ function assign() {
       }
       i++;
     }
+    alert('Chores Assigned!')
   }
 }
 
@@ -146,7 +147,7 @@ function assignChores() {
       }
     }
   }
-
+  alert('Chores Assigned!')
 }
 
 document.getElementById("myInput")
