@@ -27,8 +27,8 @@ body {
 }
 
 #done {
-    margin-left: 65%;
-    background-color: darkorange;
+    margin-left: 75%;
+    background-color: darkblue;
     color: white;
     border-radius: 5px;
     visibility: hidden;
