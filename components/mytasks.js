@@ -8,19 +8,10 @@ var checkedchores = sessionStorage.getItem('tododone' + id);
 
 function addchores() {
 	// Your code goes here
-  b = choreslist.indexOf(',');
-  var i = 1;
-  while (b != -1) {
-    chore = choreslist.substring(0, b);
-    chore = i + '. ' + chore;
-    i++;
+  choreslist = choreslist.split(',');
+  for (var i = 0; i < choreslist.length; i++) {
+    chore = (i + 1) + '. ' + choreslist[i];
     newElement(chore);
-    choreslist = choreslist.substring(b+1);
-    b =  choreslist.indexOf(',');
-  }
-  if (choreslist != []) {
-    choreslist = i + '. ' + choreslist;
-    newElement(choreslist);
   }
 };
 
@@ -82,9 +73,19 @@ function newElement(chore) {
   document.getElementById("myUL").appendChild(li);
   totalchores++;
   var i = chore.split('.')[0];
-  if (checkedchores.search(i) > -1) {
-    li.classList.toggle('checked');
-    choresdone++;
+  if (checkedchores){
+    if (checkedchores.search(i) > -1) {
+      li.classList.toggle('checked');
+      choresdone++;
+      var ppc = Math.round(Math.random()*4+8);
+      pointsearned = pointsearned + ppc;
+    }
+  }
+  if (choresdone == totalchores) {
+    donebutton.style.visibility = 'visible';
+  }
+  else {
+    donebutton.style.visibility = 'hidden';
   }
 }
 

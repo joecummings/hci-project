@@ -69,7 +69,7 @@ function assign() {
     var c;
     rms = rms.split(',');
     var rmcount = rms.length;
-    var i = 0;
+    var i = Math.round(Math.random()*4);
     var tempid;
     var tempchores;
     while (chores.length != 0){
@@ -102,7 +102,8 @@ function go() {
     var id = sessionStorage.userid;
     var houseid = sessionStorage.getItem('house' + id);
     rms  = sessionStorage.getItem(houseid);
-    for (var k = 0; k < rms.length; k+=2){
+    rms = rms.split(',');
+    for (var k = 0; k < rms.length; k++){
       var o = document.createElement("option");
       id = rms[k];
       var name = sessionStorage.getItem('name'+id)

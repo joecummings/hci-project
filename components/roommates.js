@@ -8,7 +8,8 @@ function loadrms() {
   var toppart = document.getElementById('top');
   toppart.innerHTML = 'House ID: ' + houseid;
   rms  = sessionStorage.getItem(houseid);
-  for (var i = 0; i < rms.length; i+=2) {
+  rms = rms.split(',')
+  for (var i = 0; i < rms.length; i++) {
     id = rms[i];
     roomie = sessionStorage.getItem('name'+id);
     newElement(roomie, id);
