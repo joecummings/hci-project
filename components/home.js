@@ -1,150 +1,127 @@
-var gaugeChart = AmCharts.makeChart("chartdiv", {
-  "type": "gauge",
-  "theme": "dark",
-  "axes": [{
-    "axisAlpha": 0,
-    "tickAlpha": 0,
-    "labelsEnabled": false,
-    "startValue": 0,
-    "endValue": 100,
-    "startAngle": 0,
-    "endAngle": 270,
-    "bands": [{
-      "color": "#eee",
-      "startValue": 0,
-      "endValue": 100,
-      "radius": "100%",
-      "innerRadius": "85%"
-    }, {
-      "color": "#84b761",
-      "startValue": 0,
-      "endValue": 80,
-      "radius": "100%",
-      "innerRadius": "85%",
-      "balloonText": "90%"
-    }, {
-      "color": "#eee",
-      "startValue": 0,
-      "endValue": 100,
-      "radius": "80%",
-      "innerRadius": "65%"
-    }, {
-      "color": "#fdd400",
-      "startValue": 0,
-      "endValue": 35,
-      "radius": "80%",
-      "innerRadius": "65%",
-      "balloonText": "35%"
-    }, {
-      "color": "#eee",
-      "startValue": 0,
-      "endValue": 100,
-      "radius": "60%",
-      "innerRadius": "45%"
-    }, {
-      "color": "#cc4748",
-      "startValue": 0,
-      "endValue": 92,
-      "radius": "60%",
-      "innerRadius": "45%",
-      "balloonText": "92%"
-    }, {
-      "color": "#eee",
-      "startValue": 0,
-      "endValue": 100,
-      "radius": "40%",
-      "innerRadius": "25%"
-    }, {
-      "color": "#67b7dc",
-      "startValue": 0,
-      "endValue": 68,
-      "radius": "40%",
-      "innerRadius": "25%",
-      "balloonText": "68%"
-    }]
-  }],
-  "allLabels": [{
-    "text": "Joe C",
-    "x": "49%",
-    "y": "5%",
-    "size": 15,
-    "bold": true,
-    "color": "#84b761",
-    "align": "right"
-  }, {
-    "text": "Shu",
-    "x": "49%",
-    "y": "15%",
-    "size": 15,
-    "bold": true,
-    "color": "#fdd400",
-    "align": "right"
-  }, {
-    "text": "Christoph",
-    "x": "49%",
-    "y": "24%",
-    "size": 15,
-    "bold": true,
-    "color": "#cc4748",
-    "align": "right"
-  }, {
-    "text": "Joe Ch",
-    "x": "49%",
-    "y": "33%",
-    "size": 15,
-    "bold": true,
-    "color": "#67b7dc",
-    "align": "right"
-  }],
-  "export": {
-    "enabled": true
-  }
+var id = sessionStorage.userid;
+var choreslist = sessionStorage.getItem('todo' + id);
+var checkedchores = sessionStorage.getItem('tododone' + id);
+var houseid = sessionStorage.getItem('house' + id);
+var rms = sessionStorage.getItem(houseid).split(',');
+
+for (var i = 0; i < rms.length; i++) {
+  rms[i];
+}
+
+if (choreslist) {
+  choreslist = choreslist.split(',');
+  choreslist = choreslist.length;
+} else {
+  choreslist = 1;
+}
+if (checkedchores) {
+  checkedchores = checkedchores.length;
+} else {
+  checkedchores = 0;
+}
+var ratio = checkedchores/choreslist;
+if (ratio < (1/3)) {
+  color = 'yellow';
+} else if (ratio < (2/3)) {
+  color = 'orange';
+} else {
+  color = 'green';
+}
+
+if (ratio == 1) {
+  color = "darkblue";
+}
+
+function progressBar() {
+
+    var height = 15,
+        segmentWidth = 875,
+        roundedCorners = 10,
+        backgroundFill = 'lightgray',
+        state = 'started';
+
+
+    function bar(selection) {
+
+        selection.each(function(data) {
+
+            svg.append('rect')
+                .attr('class', 'bg-rect')
+                .attr('rx', roundedCorners)
+                .attr('ry', roundedCorners)
+                .attr('fill',  backgroundFill)
+                .attr('height', height)
+                .attr('width', segmentWidth)
+                .attr('x', 0);
+
+            var progress = svg.append('rect')
+                .attr('class', 'progress-rect')
+                .attr('fill', function() {
+                  return color;
+                })
+                .attr('height', height)
+                .attr('width', 0)
+                .attr('rx', roundedCorners)
+                .attr('ry', roundedCorners)
+                .attr('x', 0);
+
+            progress.transition()
+                .duration(1000)
+                .attr('width', function() {
+                    return ratio * 875;
+                });
+
+        });
+
+    }
+
+    return bar;
+}
+// var data = {labels: [],
+//             datasets};
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var pie = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'pie',
+
+    // The data for our dataset
+    data: {
+        labels: [],
+        datasets: [{
+            backgroundColor: [],
+            data: [],
+        }]
+    },
+
+    options: {
+      legend: {
+          position: 'right'
+      }
+
+    }
 });
 
-id = sessionStorage.userid;
-var chart = AmCharts.makeChart("bardiv",
-{
-    "type": "serial",
-    "theme": "dark",
-    "dataProvider": [{
-        "name": "Me",
-        "points":   sessionStorage.getItem('points'+id),
-        "color": "#7F8DA9",
-        "bullet": "https://scontent-ort2-1.xx.fbcdn.net/v/t31.0-8/28337442_1294268390719867_4810829379562380624_o.jpg?oh=bfa15cfe858b85ccda6f7c6a318f0d05&oe=5B3D4018"
-    }],
-    "valueAxes": [{
-        "maximum": 100,
-        "minimum": 0,
-        "axisAlpha": 0,
-        "dashLength": 0,
-        "position": "left"
-    }],
-    "startDuration": 1,
-    "graphs": [{
-        "balloonText": "<span style='font-size:13px;'>[[category]]: <b>[[value]]</b></span>",
-        "bulletOffset": 10,
-        "bulletSize": 75,
-        "colorField": "color",
-        "cornerRadiusTop": 8,
-        "customBulletField": "bullet",
-        "fillAlphas": 0.8,
-        "lineAlpha": 0,
-        "type": "column",
-        "valueField": "points"
-    }],
-    "marginTop": 0,
-    "marginRight": 0,
-    "marginLeft": 0,
-    "marginBottom": 0,
-    "autoMargins": false,
-    "categoryField": "name",
-    "categoryAxis": {
-        "axisAlpha": 0.0,
-        "gridAlpha": 0.0,
-        "inside": true,
-        "tickLength": 0
-    },
-    "export": {
-    	"enabled": false
-     }
-});
+function addData(chart, label, data, color) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+        dataset.backgroundColor.push(color);
+    });
+    chart.update();
+}
+
+var colorList = ['indigo', 'purple', 'blue', 'teal', 'maroon', 'navy', 'lavender'];
+
+function loadpie() {
+  var points;
+  var name;
+  var color;
+  for (var i = 0; i < rms.length; i++) {
+    points = Number(sessionStorage.getItem('points'+rms[i]));
+    name = sessionStorage.getItem('name'+rms[i]);
+    color = colorList[i % colorList.length];
+    addData(pie, name, points, color);
+  }
+}
+loadpie();
