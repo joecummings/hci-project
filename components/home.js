@@ -115,13 +115,21 @@ var colorList = ['indigo', 'purple', 'blue', 'teal', 'maroon', 'navy', 'lavender
 
 function loadpie() {
   var points;
+  var tpoints = 0;
   var name;
   var color;
   for (var i = 0; i < rms.length; i++) {
-    points = Number(sessionStorage.getItem('points'+rms[i]));
-    name = sessionStorage.getItem('name'+rms[i]);
-    color = colorList[i % colorList.length];
-    addData(pie, name, points, color);
+    tpoints = tpoints + Number(sessionStorage.getItem('points'+rms[i]));
+  }
+  if (tpoints == 0) {
+    addData(pie, 'No points earned yet', 1, 'Grey');
+  } else {
+    for (var i = 0; i < rms.length; i++) {
+      points = Number(sessionStorage.getItem('points'+rms[i]));
+      name = sessionStorage.getItem('name'+rms[i]);
+      color = colorList[i % colorList.length];
+      addData(pie, name, points, color);
+    }
   }
 }
 loadpie();
