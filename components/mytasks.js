@@ -8,11 +8,14 @@ var checkedchores = sessionStorage.getItem('tododone' + id);
 
 function addchores() {
 	// Your code goes here
+  if(choreslist != null)
+  {
   choreslist = choreslist.split(',');
   for (var i = 0; i < choreslist.length; i++) {
     chore = (i + 1) + '. ' + choreslist[i];
     newElement(chore);
   }
+}
 };
 
 // Add a "checked" symbol when clicking on a list item
@@ -89,5 +92,9 @@ function newElement(chore) {
     donebutton.style.visibility = 'hidden';
   }
 }
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
 
 addchores();

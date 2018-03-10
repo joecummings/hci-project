@@ -31,3 +31,7 @@ function goto() {
       window.location.href = 'home.html';
     }
 }
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});

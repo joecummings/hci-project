@@ -102,6 +102,11 @@ var pie = new Chart(ctx, {
     }
 });
 
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
 function addData(chart, label, data, color) {
     chart.data.labels.push(label);
     chart.data.datasets.forEach((dataset) => {
