@@ -29,27 +29,46 @@
     </nav>
     <div class="row">
       <div class="col-lg-10" id="boddy">
-        <div class="row">
-          <div class="col-lg-7">
-            <div id="chartdiv"></div>
-            <h4> House progress</h4>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="bartitle">
+              Progress on My Chores
+            </h3>
+            <div class="progress"></div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+            <script src="home.js"></script>
+
+            <script>
+            var svg = d3.select('.progress')
+            .append('svg')
+            .attr('height', 100)
+            .attr('width', 875);
+            var bar = progressBar()
+            svg.call(bar);
+            </script>
           </div>
-          <div class="col-lg-5">
-            <div id="bardiv"></div>
-            <h4> My progress </h4>
-          </div>
+          <h3 class="chartitle">
+            Household Points Distribution
+          </h3>
+          <canvas id="myChart" height=150vw width=500vw></canvas>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
         </div>
       </div>
     </div>
     <!--  TYPE IN TITLE TO CHANGE TEXT-->
     <a class="nav-item nav-link" data-toggle="tooltip" title = "Use the same House ID as your roommates so that you can sync your chores"><i class="fas fa-info-circle"></i></a>
   </div>
+<!-- <<<<<<< joech-wip
   <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
   <script src="https://www.amcharts.com/lib/3/gauge.js"></script>
   <script src="https://www.amcharts.com/lib/3/serial.js"></script>
   <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
   <!-- <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script> -->
-  <script src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+<!--   <script src="https://www.amcharts.com/lib/3/themes/dark.js"></script> --> -->
+
+  <script src="home.js"></script>
+
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

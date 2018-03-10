@@ -65,6 +65,7 @@ function clearlist() {
   donebutton.style.visibility = 'hidden';
   totalchores = 0;
   choresdone = 0;
+  alert("You just earned " + pointsearned + " points!")
 }
 
 // Create a new list item when clicking on the "Add" button
