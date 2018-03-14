@@ -136,3 +136,10 @@ function loadpie() {
 }
 
 loadpie();
+
+var svg = d3.select('.progress')
+.append('svg')
+.attr('height', 100)
+.attr('width', 875);
+var bar = progressBar()
+svg.call(bar);
