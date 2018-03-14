@@ -1,30 +1,39 @@
 body {
-    background-color: #f6f5f3;
+  background-color: #f6f5f3;
 }
 
 .card {
-    background-color: #f9f8fd;
-    margin-top: 125px;
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+  background-color: #f9f8fd;
+  margin-top: 125px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn-primary {
-    margin: 10px;
-    margin-left: 44%;
-    background-color: #7dce94;
+  margin: 10px;
+  margin-left: 44%;
+  background-color: #7dce94;
+}
+
+.info {
+  height: 30px;
+  width: auto;
+  font-size: 15px;
+  margin-left: 93%;
+  margin-top: 18%;
+  position: absolute;
 }
 
 #logo {
-    margin-left: 35%;
-    height: 100px;
-    width: 150px;
-    padding:10px;
+  margin-left: 35%;
+  height: 100px;
+  width: 150px;
+  padding:10px;
 }
 
 #id {
-    font-size: 25px;
-    background-color: white;
-    text-align: center;
+  font-size: 25px;
+  background-color: white;
+  text-align: center;
 }

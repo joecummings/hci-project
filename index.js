@@ -14,7 +14,7 @@ function makeaccount(){
   var correctend = goodends.indexOf(endpart);
   var atexists = firstpart.indexOf('@');
   if (correctend == -1) {
-      emessage.innerHTML = 'Invalid Email';
+    emessage.innerHTML = 'Invalid Email';
   }
   else if (atexists < 0) {
     emessage.innerHTML = 'Invalid Email';
@@ -26,7 +26,7 @@ function makeaccount(){
     emessage.innerHTML = 'Invalid Email';
   }
   else if(secondpassword != thirdpassword) {
-      emessage.innerHTML = 'Passwords must match!';
+    emessage.innerHTML = 'Passwords must match!';
   }
   else if (username.length == 0) {
     emessage.innerHTML = 'No Username';
@@ -38,22 +38,22 @@ function makeaccount(){
     emessage.innerHTML = 'No Password';
   }
   else {
-      if (sessionStorage.usercount) {
-          sessionStorage.usercount = Number(sessionStorage.usercount)+1;
-      } else {
-          sessionStorage.usercount = 1;
-      }
-      sessionStorage.userid = sessionStorage.usercount;
-      var id = sessionStorage.userid;
+    if (sessionStorage.usercount) {
+      sessionStorage.usercount = Number(sessionStorage.usercount)+1;
+    } else {
+      sessionStorage.usercount = 1;
+    }
+    sessionStorage.userid = sessionStorage.usercount;
+    var id = sessionStorage.userid;
 
-      sessionStorage.setItem(username, id);
-      sessionStorage.setItem('username'+id, username);
-      sessionStorage.setItem('name'+id, name);
-      sessionStorage.setItem('email'+id, email);
-      sessionStorage.setItem('password'+id, thirdpassword);
-      sessionStorage.setItem('points'+id, Number(0));
-      sessionStorage.profileid = sessionStorage.userid;
-      window.location.href = 'components/join.html';
+    sessionStorage.setItem(username, id);
+    sessionStorage.setItem('username'+id, username);
+    sessionStorage.setItem('name'+id, name);
+    sessionStorage.setItem('email'+id, email);
+    sessionStorage.setItem('password'+id, thirdpassword);
+    sessionStorage.setItem('points'+id, Number(0));
+    sessionStorage.profileid = sessionStorage.userid;
+    window.location.href = 'components/join.html';
   }
 }
 
@@ -85,12 +85,12 @@ function login() {
   }
 }
 $( "#trigger" )
-  .mouseup(function() {
-    $("#password1").attr('type','password');
-  })
-  .mousedown(function() {
-    $("#password1").attr('type','text');
-  });
+.mouseup(function() {
+  $("#password1").attr('type','password');
+})
+.mousedown(function() {
+  $("#password1").attr('type','text');
+});
 
 function showSignUp(){
   $("#sign-up").toggleClass('hidden');
