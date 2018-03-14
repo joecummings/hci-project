@@ -1,7 +1,7 @@
 var rms;
 
+// load roommate list
 function loadrms() {
-  // Your code goes here
   var id = sessionStorage.userid;
   sessionStorage.profileid = id;
   var houseid = sessionStorage.getItem('house' + id);
@@ -16,7 +16,7 @@ function loadrms() {
   }
 };
 
-// Add a "checked" symbol when clicking on a list item
+// links each roommate to correct profile page
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
@@ -29,16 +29,18 @@ list.addEventListener('click', function(ev) {
 }, false);
 
 
-// Create a new list item when clicking on the "Add" button
+// Create a new list item for a roommate
 function newElement(rm, id) {
   var li = document.createElement("li");
   var inputValue = rm + "   (UserID: " + id +")";
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
-  // var i = document.createTextNode(id);
-  // i.style.visibility = 'hidden';
-  // li.appendChild(i);
   document.getElementById("myUL").appendChild(li);
 }
+
+// enables hover on tooltip
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
 
 loadrms();

@@ -5,6 +5,7 @@ var username;
 var password;
 var houseid;
 
+// load info for profile
 function load(uid  = sessionStorage.profileid) {
   if (uid) {
     id = uid;
@@ -60,6 +61,7 @@ function putinpic() {
   pic.src = picaddr;
 }
 
+// enable hover on tooltips
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 });
