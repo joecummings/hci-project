@@ -11,26 +11,24 @@
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="home.html"><img src="../images/logoz.png" id="logo" alt="Split Logo"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <!-- <a class="nav-item nav-link active" href="home.html">Home <span class="sr-only">(current)</span></a> -->
           <a class="nav-item nav-link active" href="tasks.html">Add Chores</a>
           <a class="nav-item nav-link" href="mytasks.html">My Chores</a>
           <a class="nav-item nav-link" href="roommates.html">Roommates</a>
           <a class="nav-item nav-link" href="me.html">My Profile</a>
           <div class="navbuffer"></div>
           <a class="nav-item nav-link" href="../index.html">Log Out</a>
-          <a class="nav-item nav-link" href="settings.html"><i class="material-icons">settings</i></a>
+          <a class="nav-item nav-link"><i class="material-icons">settings</i></a>
         </div>
       </div>
     </nav>
     <div class="row">
       <div class="col-lg-10" id="boddy">
         <div class="card">
-          <h3 class="card-header"> Add chores for the week:<a class="card-header" data-toggle="tooltip" title = "Auto assign will assign chores automatically. Manual assign requires you to select which roommate will do what chore"><i class="fas fa-info-circle"></i></a></h3>
+          <h3 class="card-header"> Add chores for the week:
+            <a class="info" data-toggle="tooltip" title = "Create and add chores to assign using the input box. When you're done, choose an assignment system. Manual lets you choose who gets what chore and Auto will randomly assign chores fairly to everyone in the Household."><i class="fas fa-info-circle"></i></a>
+          </h3>
 
           <div class="card block">
             <div class="input-group">
@@ -55,24 +53,24 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">Assign chores to you and your roommates</h5>
           <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button> -->
-        </div>
-        <div class="modal-body">
-          <ul id="myModalUL" class="list-group"></ul>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" onclick = "assignChores()" data-dismiss='modal'>Assign</button>
-        </div>
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+        <ul id="myModalUL" class="list-group"></ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick = "assignChores()" data-dismiss='modal'>Assign</button>
       </div>
     </div>
   </div>
+</div>
 
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="tasks.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="tasks.js"></script>
 </body>
 </html>

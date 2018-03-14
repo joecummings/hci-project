@@ -1,7 +1,7 @@
 body {
-    padding: 20px;
-    background-color: #f6f5f3;
-    text-align: center;
+  padding: 20px;
+  background-color: #f6f5f3;
+  text-align: center;
 }
 
 .h {
@@ -10,21 +10,17 @@ body {
 }
 
 #boddy {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 
 .navbuffer {
-    margin-left:450px;
+  margin-left:490px;
 }
 
-
 .card {
-    background-color: #f9f8fd;
-    /* margin-top: 125px; */
-    /* width: 85%; */
+  background-color: #f9f8fd;
 }
 
 .progress {
@@ -43,8 +39,24 @@ body {
 }
 
 #logo {
-    margin-left: 5%;
-    height: 50px;
-    padding:10px;
-    margin-right: 5%;
+  margin-left: 5%;
+  height: 50px;
+  padding:10px;
+  margin-right: 5%;
+}
+
+.info1 {
+  height: 30px;
+  width: auto;
+  font-size: 15px;
+  margin-left: 29.4%;
+  position: absolute;
+}
+
+.info2 {
+  height: 30px;
+  width: auto;
+  font-size: 15px;
+  margin-left: 25%;
+  position: absolute;
 }

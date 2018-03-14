@@ -7,15 +7,15 @@ var donebutton = document.getElementById('done');
 var checkedchores = sessionStorage.getItem('tododone' + id);
 
 function addchores() {
-	// Your code goes here
+  // Your code goes here
   if(choreslist != null)
   {
-  choreslist = choreslist.split(',');
-  for (var i = 0; i < choreslist.length; i++) {
-    chore = (i + 1) + '. ' + choreslist[i];
-    newElement(chore);
+    choreslist = choreslist.split(',');
+    for (var i = 0; i < choreslist.length; i++) {
+      chore = (i + 1) + '. ' + choreslist[i];
+      newElement(chore);
+    }
   }
-}
 };
 
 // Add a "checked" symbol when clicking on a list item
@@ -94,7 +94,7 @@ function newElement(chore) {
 }
 
 $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 addchores();

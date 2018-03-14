@@ -10,13 +10,11 @@ body {
 }
 
 .navbuffer {
-    margin-left:450px;
+    margin-left:490px;
 }
 
 .card {
     background-color: #f9f8fd;
-    /* margin-top: 125px; */
-    /* width: 85%; */
 }
 
 #logo {
@@ -27,11 +25,19 @@ body {
 }
 
 #done {
-    margin-left: 75%;
+    margin-left: 70%;
     background-color: darkblue;
     color: white;
     border-radius: 5px;
     visibility: hidden;
+}
+
+.info {
+  height: 30px;
+  width: auto;
+  font-size: 15px;
+  margin-left: 77.5%;
+  position: absolute;
 }
 
 ul {

@@ -34,86 +34,83 @@ if (ratio == 1) {
 
 function progressBar() {
 
-    var height = 15,
-        segmentWidth = 875,
-        roundedCorners = 10,
-        backgroundFill = 'lightgray',
-        state = 'started';
+  var height = 15,
+  segmentWidth = 875,
+  roundedCorners = 10,
+  backgroundFill = 'lightgray',
+  state = 'started';
 
 
-    function bar(selection) {
+  function bar(selection) {
 
-        selection.each(function(data) {
+    selection.each(function(data) {
 
-            svg.append('rect')
-                .attr('class', 'bg-rect')
-                .attr('rx', roundedCorners)
-                .attr('ry', roundedCorners)
-                .attr('fill',  backgroundFill)
-                .attr('height', height)
-                .attr('width', segmentWidth)
-                .attr('x', 0);
+      svg.append('rect')
+      .attr('class', 'bg-rect')
+      .attr('rx', roundedCorners)
+      .attr('ry', roundedCorners)
+      .attr('fill',  backgroundFill)
+      .attr('height', height)
+      .attr('width', segmentWidth)
+      .attr('x', 0);
 
-            var progress = svg.append('rect')
-                .attr('class', 'progress-rect')
-                .attr('fill', function() {
-                  return color;
-                })
-                .attr('height', height)
-                .attr('width', 0)
-                .attr('rx', roundedCorners)
-                .attr('ry', roundedCorners)
-                .attr('x', 0);
+      var progress = svg.append('rect')
+      .attr('class', 'progress-rect')
+      .attr('fill', function() {
+        return color;
+      })
+      .attr('height', height)
+      .attr('width', 0)
+      .attr('rx', roundedCorners)
+      .attr('ry', roundedCorners)
+      .attr('x', 0);
 
-            progress.transition()
-                .duration(1000)
-                .attr('width', function() {
-                    return ratio * 875;
-                });
+      progress.transition()
+      .duration(1000)
+      .attr('width', function() {
+        return ratio * 875;
+      });
 
-        });
+    });
 
-    }
+  }
 
-    return bar;
+  return bar;
 }
-// var data = {labels: [],
-//             datasets};
 
 var ctx = document.getElementById('myChart').getContext('2d');
 var pie = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'pie',
+  // The type of chart we want to create
+  type: 'pie',
 
-    // The data for our dataset
-    data: {
-        labels: [],
-        datasets: [{
-            backgroundColor: [],
-            data: [],
-        }]
-    },
+  // The data for our dataset
+  data: {
+    labels: [],
+    datasets: [{
+      backgroundColor: [],
+      data: [],
+    }]
+  },
 
-    options: {
-      legend: {
-          position: 'right'
-      }
-
+  options: {
+    legend: {
+      position: 'right'
     }
+
+  }
 });
 
-
 $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 function addData(chart, label, data, color) {
-    chart.data.labels.push(label);
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(data);
-        dataset.backgroundColor.push(color);
-    });
-    chart.update();
+  chart.data.labels.push(label);
+  chart.data.datasets.forEach((dataset) => {
+    dataset.data.push(data);
+    dataset.backgroundColor.push(color);
+  });
+  chart.update();
 }
 
 var colorList = ['indigo', 'purple', 'blue', 'teal', 'maroon', 'navy', 'lavender'];
@@ -137,4 +134,5 @@ function loadpie() {
     }
   }
 }
+
 loadpie();

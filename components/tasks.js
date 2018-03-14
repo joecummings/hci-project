@@ -91,8 +91,8 @@ function assign() {
 
 function go() {
   var currentChores = compare(chores, deletedChores);
-   console.log(document.getElementById("myModalUL").length);
-   document.getElementById("myModalUL").innerHTML = '';
+  console.log(document.getElementById("myModalUL").length);
+  document.getElementById("myModalUL").innerHTML = '';
   for (var j = 0; j < currentChores.length; j++){
     var li = document.createElement("li");
     var t = document.createTextNode(chores[j]);
@@ -183,5 +183,5 @@ function compare(list1, list2){
 }
 
 $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip();
 });

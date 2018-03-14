@@ -1,93 +1,99 @@
 body {
-    padding: 20px;
-    background-color: #f6f5f3;
+  padding: 20px;
+  background-color: #f6f5f3;
 
 }
 
 #boddy {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navbuffer {
-    margin-left:450px;
-    /* margin-bottom: 10px; */
+  margin-left:490px;
 }
 
 .card {
-    background-color: #f9f8fd;
-    /* padding-top: 10px; */
-    /* width: 85%; */
+  background-color: #f9f8fd;
 }
+
+.info {
+  height: 30px;
+  width: auto;
+  font-size: 15px;
+  margin-left: 60%;
+  position: absolute;
+}
+
 #logo {
-    margin-left: 5%;
-    height: 50px;
-    padding:10px;
-    margin-right: 5%;
+  margin-left: 5%;
+  height: 50px;
+  padding:10px;
+  margin-right: 5%;
 }
 
 #a1 {
-    text-align: center;
-    /* margin-left: 30%; */
-    margin-top: 20px;
-    background-color: maroon;
-    color: white;
-    border-radius: 5px;
+  text-align: center;
+  /* margin-left: 30%; */
+  margin-top: 20px;
+  background-color: maroon;
+  color: white;
+  border-radius: 5px;
 }
 
 #a2 {
-    margin-left: 3%;
-    margin-top: 20px;
-    background-color: purple;
-    color: white;
-    border-radius: 5px;
+  margin-left: 3%;
+  margin-top: 20px;
+  background-color: purple;
+  color: white;
+  border-radius: 5px;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 ul li {
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    background: #eee;
-    font-size: 18px;
-    transition: 0.2s;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
 
-    /* make the list items unselectable */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 ul li:nth-child(odd) {
-    background: #f9f9f9;
+  background: #f9f9f9;
 }
 
 ul li:hover {
-    background: #ddd;
+  background: #ddd;
 }
 
 ul li.checked {
-    background: #888;
-    color: #fff;
-    text-decoration: line-through;
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
 }
 
 ul li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
 }

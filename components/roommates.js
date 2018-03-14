@@ -1,7 +1,7 @@
 var rms;
 
 function loadrms() {
-	// Your code goes here
+  // Your code goes here
   var id = sessionStorage.userid;
   sessionStorage.profileid = id;
   var houseid = sessionStorage.getItem('house' + id);
