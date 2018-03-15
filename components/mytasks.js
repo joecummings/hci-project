@@ -6,8 +6,8 @@ var pointsearned = 0;
 var donebutton = document.getElementById('done');
 var checkedchores = sessionStorage.getItem('tododone' + id);
 
+// Load chores onto page
 function addchores() {
-  // Your code goes here
   if(choreslist != null)
   {
     choreslist = choreslist.split(',');
@@ -51,6 +51,7 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
+// clears list when done button is hit
 function clearlist() {
   var id = sessionStorage.userid;
   var points = sessionStorage.getItem('points'+id)
@@ -68,7 +69,7 @@ function clearlist() {
   alert("You just earned " + pointsearned + " points!")
 }
 
-// Create a new list item when clicking on the "Add" button
+// Create a new list item for a chore
 function newElement(chore) {
   var li = document.createElement("li");
   var inputValue = chore;
@@ -93,6 +94,7 @@ function newElement(chore) {
   }
 }
 
+// enables hover on tooltip
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 });

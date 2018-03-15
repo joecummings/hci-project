@@ -32,7 +32,6 @@ function newElement() {
     alert("You must write something!");
   } else {
     document.getElementById("myUL").appendChild(li);
-    // document.getElementById("myModalUL").appendChild(li);
     chores.push(inputValue);
   }
   document.getElementById("myInput").value = "";
@@ -44,7 +43,6 @@ function newElement() {
   li.appendChild(span);
 
   for (i = 0; i < close.length; i++) {
-    // deletedChores.push(close[i].parentElement.firstChild.data);
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
@@ -53,6 +51,7 @@ function newElement() {
   }
 }
 
+// assigns chores randomly
 function assign() {
   if (chores.length == 0){
     alert('You have to enter some chores first');
@@ -89,6 +88,7 @@ function assign() {
   }
 }
 
+// opens window for manual assign
 function go() {
   var currentChores = compare(chores, deletedChores);
   console.log(document.getElementById("myModalUL").length);
@@ -98,7 +98,6 @@ function go() {
     var t = document.createTextNode(chores[j]);
     li.appendChild(t);
     var select = document.createElement("select");
-    // hardcoded in values
     var id = sessionStorage.userid;
     var houseid = sessionStorage.getItem('house' + id);
     rms  = sessionStorage.getItem(houseid);
@@ -116,6 +115,8 @@ function go() {
     document.getElementById("myModalUL").appendChild(li);
   }
 }
+
+// manually assigns chores
 function assignChores() {
   for (i = 0; i < close.length; i++) {
     var div = close[i].parentElement;
@@ -182,6 +183,7 @@ function compare(list1, list2){
   return returnlist;
 }
 
+// enables tooltip hover
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 });

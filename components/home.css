@@ -60,3 +60,7 @@ body {
   margin-left: 25.2%;
   position: absolute;
 }
+
+.paddin {
+  padding-top: 25px;
+}

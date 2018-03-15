@@ -4,6 +4,7 @@ var checkedchores = sessionStorage.getItem('tododone' + id);
 var houseid = sessionStorage.getItem('house' + id);
 var rms = sessionStorage.getItem(houseid).split(',');
 
+// get data for progress bar
 for (var i = 0; i < rms.length; i++) {
   rms[i];
 }
@@ -28,10 +29,7 @@ if (ratio < (1/3)) {
   color = 'green';
 }
 
-if (ratio == 1) {
-  color = "darkblue";
-}
-
+// setup progress bar
 function progressBar() {
 
   var height = 15,
@@ -78,6 +76,15 @@ function progressBar() {
   return bar;
 }
 
+
+var svg = d3.select('.progress')
+.append('svg')
+.attr('height', 100)
+.attr('width', 875);
+var bar = progressBar()
+svg.call(bar);
+
+// setup pie chart
 var ctx = document.getElementById('myChart').getContext('2d');
 var pie = new Chart(ctx, {
   // The type of chart we want to create
@@ -94,14 +101,9 @@ var pie = new Chart(ctx, {
 
   options: {
     legend: {
-      position: 'right'
+      position: 'bottom',
     }
-
   }
-});
-
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();
 });
 
 function addData(chart, label, data, color) {
@@ -115,6 +117,7 @@ function addData(chart, label, data, color) {
 
 var colorList = ['indigo', 'purple', 'blue', 'teal', 'maroon', 'navy', 'lavender'];
 
+// load piechart with point stats
 function loadpie() {
   var points;
   var tpoints = 0;
@@ -137,9 +140,7 @@ function loadpie() {
 
 loadpie();
 
-var svg = d3.select('.progress')
-.append('svg')
-.attr('height', 100)
-.attr('width', 875);
-var bar = progressBar()
-svg.call(bar);
+// make tooltips hoverable
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
